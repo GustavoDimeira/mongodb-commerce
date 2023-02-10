@@ -6,7 +6,9 @@
 
 const totalProdutos = db.produtos.find().count();
 
-dp.resumoProdutos.insertOne({}, {
+db.resumoProdutos.insert({
   franquia: "McDonalds",
   totalProdutos,
 });
+
+db.resumoProdutos.find({}, { _id: 0 });
